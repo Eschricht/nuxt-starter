@@ -1,6 +1,7 @@
-<!-- <p align="center">
-<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
-</p> -->
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5b6b4e2c-b4bd-4168-ba8e-ed6e43510bea" width="600"/>
+</p>
+
 
 <h2 align="center">
 <a href="https://github.com/eschricht/nuxt-starter">Eschricht Nuxt Starter</a> for Nuxt 3
