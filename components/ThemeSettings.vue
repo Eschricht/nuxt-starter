@@ -46,7 +46,7 @@ function setTheme(theme: string) {
         Custom theme colors
       </p>
 
-      <div un-gap="4" un-items="center" un-justify="center" un-text="left" un-flex>
+      <div un-flex="~ wrap" un-gap="4" un-items="center" un-justify="center" un-text="left">
         <div>
           <label for="s-bg" un-text="xs">Surface background</label><br>
           <ColorInput id="s-bg" v-model="customTheme.surface.background" />
