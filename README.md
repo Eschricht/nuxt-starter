@@ -20,7 +20,7 @@
 
 - 🎨 [Artivue](https://github.com/Eschricht/artivue) - Theming engine for Vue applications.
 
-- 🎨 [Artivue](https://github.com/Eschricht/nuxt-color-mode) - Color mode with SSR auto detection for Nuxt.
+- 🎨 [Nuxt Color Mode](https://github.com/Eschricht/nuxt-color-mode) - Color mode with SSR auto detection for Nuxt.
 
 - 🦄 [UnoCSS](https://github.com/unocss/unocss) - The instant on-demand atomic CSS engine.
 
