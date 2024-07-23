@@ -7,12 +7,12 @@
 <a href="https://github.com/eschricht/nuxt-starter">Eschricht Nuxt Starter</a> for Nuxt 3
 </h2><br>
 
-<!-- <p align="center">
+<p align="center">
 <br>
-<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
+<a href="https://eschricht-nuxt-starter.vercel.app">🖥 Online Preview</a>
 <br><br>
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-</p> -->
+<a href="https://stackblitz.com/github/eschricht/nuxt-starter"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
+</p>
 
 ## Features
 
