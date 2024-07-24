@@ -2,5 +2,6 @@
   <div>
     <WelcomeText />
     <slot />
+    <FooterContainer />
   </div>
 </template>
