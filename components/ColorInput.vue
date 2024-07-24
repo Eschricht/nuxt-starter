@@ -23,7 +23,7 @@ const value = computed({
 
 <template>
   <label :class="{ 'opacity-50': disabled }" un-artivue="input-within" un-gap="2" un-inline="flex" un-items="center" un-justify="between" un-p="y-1 x-2" un-w="32">
-    <p un-text="artivue-surface-text-alt-2">{{ value }}</p>
+    <p un-font="mono" un-text="artivue-surface-text-alt-2">{{ value }}</p>
     <input v-model="value" :disabled="disabled" type="color" un-bg="transparent" un-border="none" un-h="6" un-overflow="hidden" un-w="6" v-bind="$attrs">
   </label>
 </template>

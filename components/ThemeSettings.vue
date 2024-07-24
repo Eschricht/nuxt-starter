@@ -26,15 +26,15 @@ function setTheme(theme: string) {
       </p>
 
       <div un-flex="~ wrap" un-gap="4" un-items="center" un-justify-center>
-        <button v-for="(theme, key) in themes" :key="key" :class="{ 'artivue-button-accent': colorMode.preference === key }" un-artivue-button="~ solid" un-case="capital" un-gap="2" un-items="center" un-flex @click="setTheme(key)">
-          <ThemeLayer :theme as="div" un-artivue="surface" un-border="~ artivue-surface-border" un-gap="1" un-items="center" un-p="x-1" un-rounded="md" un-flex>
+        <button v-for="(theme, key) in themes" :key="key" :class="{ 'artivue-button-accent': colorMode.preference === key }" un-artivue-button="~ solid" un-case="capital" un-gap="2" un-items="center" un-p="l-0.5 y-0.5" un-flex @click="setTheme(key)">
+          <ThemeLayer :theme as="div" un-artivue="surface" un-border="~ artivue-surface-border" un-gap="1" un-items="center" un-p="x-1 y-0.5" un-rounded="md" un-flex>
             <div un-bg="artivue-accent" un-h="2" un-rounded="md" un-w="2" />
-            <div un-text="xs">
+            <div un-text="sm">
               Aa
             </div>
           </ThemeLayer>
 
-          <div>
+          <div :class="{ 'font-bold': colorMode.preference === key }">
             {{ key }}
           </div>
         </button>
@@ -43,27 +43,27 @@ function setTheme(theme: string) {
 
     <div v-if="colorMode.preference === 'custom'" un-border="t artivue-surface-border" un-p="4">
       <p un-m="b-2" un-text="lg">
-        Custom theme colors
+        <strong>Custom theme colors</strong>
       </p>
 
-      <div un-flex="~ wrap" un-gap="4" un-items="center" un-justify="center" un-text="left">
+      <div un-flex="~ wrap" un-gap="4" un-items="center" un-justify="center">
         <div>
-          <label for="s-bg" un-text="xs">Surface background</label><br>
+          <label for="s-bg" un-text="sm">Surface background</label><br>
           <ColorInput id="s-bg" v-model="customTheme.surface.background" />
         </div>
 
         <div>
-          <label for="s-text" un-text="xs">Surface text</label><br>
+          <label for="s-text" un-text="sm">Surface text</label><br>
           <ColorInput id="s-text" v-model="customTheme.surface.text" />
         </div>
 
         <div>
-          <label for="a-bg" un-text="xs">Accent background</label><br>
+          <label for="a-bg" un-text="sm">Accent background</label><br>
           <ColorInput id="a-bg" v-model="customTheme.accent.background" />
         </div>
 
         <div>
-          <label for="a-text" un-text="xs">Accent text</label><br>
+          <label for="a-text" un-text="sm">Accent text</label><br>
           <ColorInput id="a-text" v-model="customTheme.accent.text" />
         </div>
       </div>

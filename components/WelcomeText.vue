@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <div>
-    <h2 un-font="medium" un-text="6xl">
+  <div un-p="x-6 sm:x-8 md:x-16">
+    <h2 un-font="medium" un-text="4xl sm:6xl">
       Welcome
     </h2>
     <hr un-border="artivue-surface-border" un-m="y-2">
