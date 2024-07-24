@@ -7,7 +7,7 @@ export default defineNuxtPlugin(() => {
 
   useHead({
     htmlAttrs: {
-      class: () => isDark.value ? 'dark' : undefined,
+      class: () => (isDark.value && colorMode.value !== 'dark') ? 'dark' : '',
     },
   })
 
