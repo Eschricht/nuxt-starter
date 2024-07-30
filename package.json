@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.23.2",
-    "@artivue/nuxt": "^0.3.7",
-    "@artivue/unocss": "^0.3.7",
-    "@eschricht/nuxt-color-mode": "^1.1.2",
+    "@artivue/nuxt": "^0.3.10",
+    "@artivue/unocss": "^0.3.10",
+    "@eschricht/nuxt-color-mode": "^1.1.5",
     "@iconify-json/ph": "^1.1.13",
     "@nuxt/eslint": "^0.3.13",
     "@unocss/eslint-plugin": "^0.61.5",

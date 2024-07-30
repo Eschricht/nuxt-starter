@@ -31,5 +31,9 @@ export default defineNuxtConfig({
   colorMode: {
     classPrefix: '',
     classSuffix: '',
+    fallback: 'Nuxt Light',
+    systemDarkName: 'Nuxt Dark',
+    systemLightName: 'Nuxt Light',
+    dataValue: 'artivue-theme',
   },
 })

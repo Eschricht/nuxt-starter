@@ -1,17 +1,35 @@
 <script setup lang="ts">
-import { themes as artivueThemes } from 'artivue'
+import { type Theme, themes as artivueThemes } from 'artivue'
 
 const customTheme = useCustomTheme()
 const colorMode = useColorMode()
+const {
+  themes: allThemes,
+  customThemes,
+} = useCustomThemes()
 
-const themes = reactive({
+const themes = computed(() => ({
   system: colorMode.system === 'dark' ? artivueThemes.dark : artivueThemes.light,
-  ...artivueThemes,
-  custom: customTheme,
-})
+  ...allThemes.value,
+  custom: customTheme.value,
+}))
+
+const customThemeName = ref('')
 
 function setTheme(theme: string) {
   colorMode.preference = theme
+}
+
+function saveCustomTheme() {
+  if (!customThemeName.value)
+    return
+
+  customThemes.value = {
+    ...customThemes.value,
+    [customThemeName.value]: customTheme.value,
+  }
+
+  customThemeName.value = ''
 }
 </script>
 
@@ -22,7 +40,7 @@ function setTheme(theme: string) {
         Theme Settings
       </h2>
       <p un-m="b-4" un-text="sm artivue-surface-text-alt-1">
-        Powered by <a href="https://artivue.eschricht.dev" target="_blank" un-underline>@artivue/nuxt</a>
+        Powered by <a href="https://artivue.eschricht.dev" target="_blank" un-underline>@artivue/nuxt</a> and <a href="https://github.com/Eschricht/nuxt-color-mode" target="_blank" un-underline>@eschricht/nuxt-color-mode</a>
       </p>
 
       <div un-flex="~ wrap" un-gap="4" un-items="center" un-justify-center>
@@ -65,6 +83,16 @@ function setTheme(theme: string) {
         <div>
           <label for="a-text" un-text="sm">Accent text</label><br>
           <ColorInput id="a-text" v-model="customTheme.accent.text" />
+        </div>
+      </div>
+
+      <div un-justify="center" un-m="t-8" un-flex>
+        <div un-text="left">
+          <label for="save-theme-name" un-text="sm">Save theme configuration</label><br>
+          <input id="save-theme-name" v-model="customThemeName" placeholder="My custom theme" un-p="l-2" un-artivue-i>
+          <button :disabled="!customThemeName" un-artivue-btn="~ solid accent" un-m="l-1" @click="saveCustomTheme">
+            Save
+          </button>
         </div>
       </div>
     </div>
