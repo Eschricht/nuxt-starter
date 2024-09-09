@@ -31,7 +31,7 @@
 
 ## IDE
 
-I recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience.
+I recommend using [VS Code](https://code.visualstudio.com/) with [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to get the best experience.
 
 ## Try it now!
 

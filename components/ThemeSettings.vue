@@ -14,6 +14,8 @@ const themes = computed(() => ({
   custom: customTheme.value,
 }))
 
+const customThemeNames = computed(() => Object.keys(customThemes.value))
+
 const customThemeName = ref('')
 
 function setTheme(theme: string) {
@@ -30,6 +32,17 @@ function saveCustomTheme() {
   }
 
   customThemeName.value = ''
+}
+
+function removeCustomTheme(themeName: string) {
+  delete customThemes.value[themeName]
+}
+
+function extendTheme(themeName: string) {
+  const theme = themes.value[themeName as keyof typeof themes.value]
+  customTheme.value = { ...theme }
+
+  setTheme('custom')
 }
 </script>
 
@@ -95,6 +108,16 @@ function saveCustomTheme() {
           </button>
         </div>
       </div>
+    </div>
+
+    <div v-else un-gap="4" un-justify="center" un-p="4" un-flex>
+      <ThemeLayer v-if="customThemeNames.includes(colorMode.preference)" :multiplier="0" :theme="{ accent: { background: '#A33E3E' } }" as="button" un-artivue-btn="~ solid accent" @click="removeCustomTheme(colorMode.preference)">
+        Remove
+      </ThemeLayer>
+
+      <button un-artivue-btn="~ solid accent" @click="extendTheme(colorMode.preference)">
+        Extend theme
+      </button>
     </div>
   </ThemeLayer>
 </template>
